@@ -109,7 +109,7 @@ class PyPolyChord(NestedSampler):
 
     def log_likelihood(self, theta):
         """Overrides the log_likelihood so that PolyChord understands it"""
-        return super(PyPolyChord, self).log_likelihood(theta), theta
+        return float(super(PyPolyChord, self).log_likelihood(theta), theta)
 
     def _read_sample_file(self):
         """
